@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       @books = @user.books
       @book = Book.new
-      render "show"
+      render :show
     end
   end
 

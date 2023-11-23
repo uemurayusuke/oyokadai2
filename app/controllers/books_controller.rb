@@ -19,7 +19,6 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to book_path(@book), notice: "You have created book successfully."
     else
-      @book = Book.new
       @books = Book.all
       render :index
     end

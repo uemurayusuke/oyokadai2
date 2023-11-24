@@ -10,10 +10,12 @@
   <tbody>
     <% books.each do |book| %>
       <tr>
+
         <td><%= link_to(book.user) do %>
           <%= image_tag book.user.get_profile_image(50,50) %>
           <% end %>
         </td>
+
         <td><%= link_to book.title,book %></td>
         <td><%= book.body %></td>
 
@@ -30,11 +32,13 @@
         ♡<%= book.favorites.count %>
       <% end %>
     </p>
-    <p>コメント数：<%= @book.book_comments.count %></p>
-  <% end %>
-  </td>
+    <% end %>
+    </td>
 
-      </tr>
+    <td>
+    <p>コメント数：<%= @book.book_comments.count %></p>
+    </td>
+    </tr>
     <% end %>
   </tbody>
 </table>

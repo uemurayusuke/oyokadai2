@@ -9,6 +9,12 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :book_comments, dependent: :destroy
 
+
+  # has_many :xxx, class_name: "モデル名", foreign_key: "○○_id", dependent: :destroy
+  # has_many :yyy, through: :xxx, source: :zzz
+
+
+
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :name, length: { in: 2..20 }
